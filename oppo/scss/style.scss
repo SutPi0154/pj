@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+
+$primary: black;
+$danger: #c0a69a;
+$warning: rgb(63, 63, 63);
+$carousel-control-opacity: 0;
+$carousel-control-width: 5%;
+$info: rgb(22, 22, 22);
+
+// carousel icon changing
+$carousel-control-next-icon-bg: url(../images/next.svg);
+$carousel-control-prev-icon-bg: url(../images/previous.svg);
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-spacer: 10px;
+$carousel-dark-indicator-active-bg: $info;
+
+$font-family-sans-serif: "Arimo", sans-serif;
+
+$btn-hover-bg-shade-amount: 15%;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
