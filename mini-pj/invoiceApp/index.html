@@ -14,14 +14,28 @@
           <div class="col-12">
             <div class="d-flex justify-content-between align-items-center">
               <h1 class="my-3">Invoice App</h1>
-              <button class="btn btn-outline-dark d-print-none" onclick="print()">Printer</button>
+              <button
+                class="btn btn-outline-dark d-print-none"
+                onclick="print()"
+              >
+                Printer
+              </button>
             </div>
             <div class="p-3 border mb-3 d-print-none">
               <form action="" class=" " id="invoiceForm">
                 <div class="row">
-                  <div class="col">
+                  <div class="col-6">
                     <div class="">
-                      <label for="" class="form-label">Select Service</label>
+                      <label
+                        for=""
+                        class="form-label d-flex justify-content-between"
+                        >Select Service
+                        <span
+                          class="badge bg-black my-auto"
+                          id="addServiceOpenBtn"
+                          >Add Service</span
+                        >
+                      </label>
                       <select
                         name=""
                         id="selectService"
@@ -74,6 +88,46 @@
                 </tr>
               </tfoot>
             </table>
+          </div>
+        </div>
+      </div>
+      <div class="position-fixed w-100 top-0 end-0 d-none" id="serviceModal">
+        <div class="row vh-100 justify-content-center align-items-center bg">
+          <div class="col-12 col-md-6 col-lg-6 col-4">
+            <div class="bg-white p-5">
+              <h4>Add New Service</h4>
+              <hr />
+              <form action="" class=" " id="addServiceForm">
+                <div class="mb-3">
+                  <label for="" class="form-label">Service Title</label>
+                  <input
+                    type="text"
+                    name="serviceTitle"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="mb-5">
+                  <label for="" class="form-label">Service Price</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="servicePrice"
+                    required
+                  />
+                </div>
+                <button
+                  class="btn btn-dark"
+                  type="button"
+                  id="closeServiceModalBtn"
+                >
+                  close
+                </button>
+                <button class="btn btn-dark">
+                  <i class="bi bi-plus-circle"></i> Add
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -45,6 +45,10 @@ const tax = document.querySelector("#tax");
 const subTotal = document.querySelector("#subTotal");
 const listTotal = document.querySelector("#listTotal");
 const listTable = document.querySelector("#listTable");
+const addServiceOpenBtn = document.querySelector("#addServiceOpenBtn ");
+const serviceModal = document.querySelector("#serviceModal");
+const closeServiceModalBtn = document.querySelector("#closeServiceModalBtn");
+const addServiceForm = document.querySelector("#addServiceForm");
 
 const createTr = (service, quantity) => {
   const tr = document.createElement("tr");
@@ -90,12 +94,11 @@ const showTable = () => {
   }
 };
 
+//form event listen
 invoiceForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const selectedService = services.find(
-    ({id}) =>  id == selectService.value
-  );
+  const selectedService = services.find(({ id }) => id == selectService.value);
 
   const isExistedService = [...lists.children].find(
     (el) => el.getAttribute("serviceId") == selectedService.id
@@ -115,11 +118,34 @@ invoiceForm.addEventListener("submit", (event) => {
   showTable();
 });
 
+// app event listen
 app.addEventListener("click", (event) => {
   const currentElement = event.target;
   if (currentElement.classList.contains("del-btn")) {
     currentElement.closest("tr").remove();
     findTotal();
-    showTable( );
+    showTable();
   }
+});
+
+addServiceOpenBtn.addEventListener("click", () => {
+  serviceModal.classList.remove("d-none");
+});
+closeServiceModalBtn.addEventListener("click", () => {
+  serviceModal.classList.add("d-none");
+});
+
+addServiceForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  console.log(formData.get("serviceTitle"), formData.get("servicePrice"));
+  const id = Math.random();
+  services.push({
+    id,
+    name: formData.get("serviceTitle"),
+    price: formData.get("servicePrice"),
+  });
+  selectService.append(new Option(formData.get("serviceTitle"), id));
+  event.target.reset();
+  serviceModal.classList.add("d-none");
 });
