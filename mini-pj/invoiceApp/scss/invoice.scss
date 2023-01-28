@@ -6,13 +6,13 @@ $enable-rounded: false;
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
-.del-btn {
+.drop-down {
   //   display: none;
   transform: scale(0);
   transition: 0.5s;
 }
 
-tr:hover .del-btn {
+tr:hover .drop-down {
   //   display: inline-block;
   transform: scale(1);
 }

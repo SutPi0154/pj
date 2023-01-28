@@ -46,9 +46,10 @@ const subTotal = document.querySelector("#subTotal");
 const listTotal = document.querySelector("#listTotal");
 const listTable = document.querySelector("#listTable");
 const addServiceOpenBtn = document.querySelector("#addServiceOpenBtn ");
-const serviceModal = document.querySelector("#serviceModal");
+// const serviceModal = document.querySelector("#serviceModal");
 const closeServiceModalBtn = document.querySelector("#closeServiceModalBtn");
 const addServiceForm = document.querySelector("#addServiceForm");
+const addServiceModal = new bootstrap.Modal("#addServiceModal");
 
 const createTr = (service, quantity) => {
   const tr = document.createElement("tr");
@@ -57,7 +58,20 @@ const createTr = (service, quantity) => {
   const total = service.price * quantity;
   tr.innerHTML = `
   <td class="d-flex justify-content-between">${service.title}
-  <i class="bi bi-trash3 del-btn text-danger"></i> 
+  <div class="dropdown">
+  <i
+    class="bi bi-three-dots-vertical drop-down"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+  </i>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item del-btn " href="#">Delete</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
   </td>
   <td class="text-end list-quantity">${quantity}</td>
   <td class="text-end">${service.price}</td>
@@ -128,24 +142,27 @@ app.addEventListener("click", (event) => {
   }
 });
 
-addServiceOpenBtn.addEventListener("click", () => {
-  serviceModal.classList.remove("d-none");
+addServiceOpenBtn.addEventListener("dblclick", () => {
+  addServiceModal.show();
 });
 closeServiceModalBtn.addEventListener("click", () => {
-  serviceModal.classList.add("d-none");
+  addServiceModal.hide();
 });
 
 addServiceForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
   const formData = new FormData(event.target);
+  formData;
+
   console.log(formData.get("serviceTitle"), formData.get("servicePrice"));
   const id = Math.random();
   services.push({
     id,
-    name: formData.get("serviceTitle"),
+    title: formData.get("serviceTitle"),
     price: formData.get("servicePrice"),
   });
   selectService.append(new Option(formData.get("serviceTitle"), id));
   event.target.reset();
-  serviceModal.classList.add("d-none");
+  addServiceModal.hide();
 });
