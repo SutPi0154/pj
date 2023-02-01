@@ -2,7 +2,7 @@ const photoUpload = document.querySelector("#photoUpload");
 const uploaderUI = document.querySelector("#uploaderUI");
 const photos = document.querySelector("#photos");
 const createSlideShow = document.querySelector("#createSlideShow");
-const output  = document.querySelector("#output ");
+const output = document.querySelector("#output ");
 
 uploaderUI.addEventListener("click", () => {
   photoUpload.click();
@@ -69,4 +69,25 @@ photoUpload.addEventListener("change", (event) => {
 createSlideShow.addEventListener("click", () => {
   const allPhoto = [...document.querySelectorAll(".photo")];
   createCarousel(allPhoto.map((el) => el.src));
+});
+
+uploaderUI.addEventListener("dragover", (event) => {
+  event.preventDefault();
+  // console.log(event);
+});
+
+uploaderUI.addEventListener("drop", (event) => {
+  event.preventDefault();
+  console.log();
+  [...event.dataTransfer.files].forEach((file) => {
+    const img = new Image();
+    const reader = new FileReader();
+
+    reader.addEventListener("load", (event) => {
+      img.src = event.target.result;
+      img.classList.add("photo", "m-2");
+      photos.append(img);
+    });
+    reader.readAsDataURL(file);
+  });
 });
