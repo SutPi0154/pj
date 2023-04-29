@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;800&display=swap");
+
+$primary: hsl(19, 64%, 54%);
+$secondary: hsl(19, 16%, 15%);
+//btn text color
+$info: hsl(23, 5%, 30%);
+$headings-font-family: "Lora";
+
+// review card bg
+$warning: hsl(21, 70%, 83%);
+// $display-font-family: "Dancing Script";
+$success: hsl(19, 100%, 96%);
+$body-bg: hsl(19, 100%, 97%);
+$font-family-sans-serif: "Poppins", sans-serif;
+// $navbar-padding-x: 1rem;
+// $navbar-padding-x:;
+$navbar-nav-link-padding-x: 1rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+.spacer-100 {
+  //   margin: 100px 0;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+.margin-50 {
+  margin: 100px;
+}
+
+.dancing-fm {
+  font-family: "Dancing Script", cursive;
+}
+.icon:hover,
+:active {
+  border: 0;
+}
+.bEnd {
+  border-right: 1px solid rgb(164, 101, 43);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a.active {
+  text-decoration: underline;
+  color: $primary;
+}
+.link-hover {
+  position: relative;
+}
+// .btn-color :hover,
+// :active {
+//   color: #fff;
+// }

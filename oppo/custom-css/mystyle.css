@@ -76,7 +76,7 @@ li {
 .hover-img:hover {
   /* width: 100%;
   overflow: visible; */
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 .nav-link-hover {
   position: relative;
