@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
-import Guard from "../components/Guard";
+// import Guard from "../components/Guard";
 
 const Path = () => {
   return (
@@ -13,9 +13,9 @@ const Path = () => {
           <Route
             path="/"
             element={
-              <Guard>
-                <Dashboard />
-              </Guard>
+              // <Guard>
+              <Dashboard />
+              // </Guard>
             }
           />
           <Route path="/login" element={<Login />} />

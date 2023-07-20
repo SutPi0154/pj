@@ -1,67 +1,63 @@
 import React from "react";
-import {
-  BsGithub,
-  BsFacebook,
-  BsTelegram,
-  BsMouse,
-  BsArrowDownShort,
-} from "react-icons/bs";
-import { IoIosSend } from "react-icons/io";
-import "./Hero.css";
+// import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
+import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    <div className=" flex justify-around items-center gap-5">
-      <div className="  h-screen flex flex-col gap-10  items-center justify-center">
-        <Link to={"https://github.com/SutPi0154"} className="">
-          <BsGithub className=" text-firstColor rounded-full  hover:text-firstColorAlt text-3xl" />
-        </Link>
-        <Link to={"https://telegram.org/"} className="">
-          <BsTelegram className=" text-firstColor rounded-full  hover:text-firstColorAlt text-3xl" />
-        </Link>
-        <Link
-          to={"https://www.facebook.com/profile.php?id=100087893903639"}
-          className=""
-        >
-          <BsFacebook className=" text-firstColor rounded-full  hover:text-firstColorAlt text-3xl" />
-        </Link>
-      </div>
-      <div className=" mt-60 flex flex-col items-start justify-between w-[30%]">
-        <div>
-          <p className=" text-5xl font-bold text-titleColor">
-            Hi, I'm Jl Sut Pi
+    <>
+      <div className=" container mt-20 mx-auto flex justify-center items-center flex-wrap">
+        <div className="w-[40%]">
+          <div className=" ">
+            <p className=" text-2xl mb-5">Hello , I'm </p>
+
+            <div className="text-primary mt-5 text-5xl">
+              {/* <Typewriter
+                options={{
+                  strings: ["Jl Sut Pi"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              /> */}
+            </div>
+            <p className=" text-xl font-bold mt-5">Front-end Developer</p>
+          </div>
+          <p className=" mt-5 text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+            harum tempora voluptatum ea quas ad nobis quia accusamus a maxime ex
           </p>
-          <p className=" my-5 text-2xl text-titleColor"> Frontend developer</p>
-          <p className=" text-md text-textColorLight text">
-            High level experience in web design and development knowledge,
-            producing quality work.
-          </p>
-          <button className=" mt-10 gap-3 hover:bg-firstColorAlt bg-firstColor py-3 px-3 rounded-lg flex justify-center items-center">
-            <span className=" text-lg text-bodyColor font-bold ">
-              Contact Me
-            </span>
-            <IoIosSend className=" text-bodyColor font-bold  text-lg" />
+          <button className=" bg-primary hover:bg-hover mt-7  text-white px-7  py-3 rounded-lg">
+            Hire Me
           </button>
-        </div>
-        <div className=" mt-40">
-          <div className=" flex  justify-center items-center">
-            <BsMouse className=" text-3xl text-firstColor" />
-            <p className=" text-textColor"> scroll down</p>
-            <button className="animate__animated animate__bounce">
-              <BsArrowDownShort className="  text-3xl text-firstColor" />
-            </button>
+          <div className=" flex gap-5 mt-20">
+            <Link>
+              <button className="  bg-primary image p-2">
+                <AiFillGithub className=" text-xl  text-white" />
+              </button>
+            </Link>
+            <Link>
+              <button className="  bg-primary image p-2">
+                <BsFacebook className=" text-xl  text-white" />
+              </button>
+            </Link>
+            <Link>
+              <button className="  bg-primary image p-2">
+                <AiFillInstagram className=" text-xl  text-white" />
+              </button>
+            </Link>
           </div>
         </div>
+        <div className=" w-[50%]">
+          <img
+            className=" image"
+            src="https://png.pngtree.com/png-vector/20220718/ourlarge/pngtree-javascript-abstract-concept-vector-illustration-png-image_5914492.png"
+            alt=""
+          />
+        </div>
       </div>
-      <div>
-        <img
-          src="/image/Profile.png"
-          className="profile bg-firstColor w-[500px]"
-          alt=""
-        />
-      </div>
-    </div>
+    </>
   );
 };
 

@@ -4,24 +4,26 @@ export default {
 
   theme: {
     colors: {
-      firstColor: "hsl(250, 69%, 61%)",
-      firsColorSecond: "hsl(250, 69%, 61%)",
-      firstColorAlt: "hsl(250, 57%, 53%)",
-      firstColorLighter: "hsl(250, 92%, 85%)",
-      titleColor: "hsl(250, 8%, 15%)",
-      textColor: "hsl(250, 8%, 45%)",
-      textColorLight: "hsl(250, 8%, 65%)",
-      inputColor: "hsl(250, 70%, 96%)",
-      bodyColor: "hsl(250, 60%, 99%)",
-      containerColor: "#fff",
-      scrollBarColor: "hsl(250, 12%, 90%)",
-      scrollThumbColor: "hsl(250, 12%, 80%)",
+      primary: "rgb(20, 184, 166)",
+      muted: "rgb(107 114 128)",
+      hover: "rgb(20 184 166 )",
+      white: "#fff",
+      
+      //   blue: "#1fb6ff",
+      //   purple: "#7e5bef",
+      //   pink: "#ff49db",
+      //   orange: "#ff7849",
+      //   green: "#13ce66",
+      //   yellow: "#ffc82c",
+      "gray-dark": "#273444",
+      gray: "#8492a6",
+      //   "gray-light": "#d3dce6",
     },
     fontFamily: {
-      sans: ["Poppins", " sans-serif"],
-      serif: ["Merriweather", "serif"],
+      sans: ["Roboto", "sans-serif"],
+      serif: ["Poltawski Nowy", "serif"],
     },
-
     extend: {},
   },
+  plugins: [],
 };

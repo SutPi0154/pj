@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.dark-ov {
+  background-color: rgba(0, 0, 0, 0.4);
+  @apply w-full h-full left-0 top-0 absolute z-10;
+}
+.text-box {
+  @apply absolute z-20 text-white left-10 p-2 rounded-sm  top-1/2 w-1/2;
+  background-color: rgba(33, 35, 38, 0.1);
+
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+body {
+  background-color: #252525;
+}
+.detail-container {
+  top: 40%;
+  z-index: 50;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  left: 10%;
+}
+
+.splide__pagination__page {
+  background-color: #ccc; /* Inactive button color */
+  border-radius: 50%; /* Round the button */
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  transition: background-color 0.2s ease;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #ccc; /* Active button color */
+}
+
+.play-ic {
+  transform: translateX(-50%);
+  bottom: 30%;
+  left: 50%;
+}

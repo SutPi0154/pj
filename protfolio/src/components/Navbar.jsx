@@ -3,30 +3,27 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="   flex justify-between mt-5">
-      <div>
-        <p className=" font-sans text-2xl font-bold">Jl Sut Pi</p>
-      </div>
-      <div className=" flex gap-7 ">
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor  hover:text-firstColor">
+    <nav className=" flex justify-between my-5 items-center container mx-auto">
+     <div className="flex gap-1 items-center ">
+     <h1 className=" text-purple text-2xl text-primary">Jl</h1>
+     <p className=" text-2xl">Sut Pi</p>
+     </div>
+      <div className=" flex justify-evenly">
+        <NavLink className="nav-link nav-link-hover hover:underline mr-20">
           <button>Home</button>
         </NavLink>
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor hover:text-firstColor">
+        <NavLink className="nav-link nav-link-hover hover:underline mr-20">
           <button>About</button>
         </NavLink>
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor hover:text-firstColor">
+        <NavLink className="nav-link nav-link-hover hover:underline mr-20">
           <button>Skills</button>
         </NavLink>
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor hover:text-firstColor">
-          <button>Services</button>
+        <NavLink className="nav-link nav-link-hover hover:underline mr-20">
+          <button>Pricing</button>
         </NavLink>
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor hover:text-firstColor">
-          <button>Protfolio</button>
+        <NavLink className="nav-link nav-link-hover hover:underline mr-20">
+          <button>Contact</button>
         </NavLink>
-        <NavLink className=" text-lg text-textColor  font-medium active:text-firstColor hover:text-firstColor">
-          <button>Contact me</button>
-        </NavLink>
-        <button></button>
       </div>
     </nav>
   );

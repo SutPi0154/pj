@@ -14,6 +14,12 @@ export const contactApi = createApi({
       }),
       providesTags: ["contact"],
     }),
+    // getProfile: builder.query({
+    //   query: (token) => ({
+    //     url: "user-profile",
+    //     headers: { authorization: `Bearer ${token}` },
+    //   }),
+    // }),
   }),
 });
 

@@ -1,0 +1,43 @@
+/* .navbar-item{
+
+}
+.nav-link-hover {
+    position: relative;
+  }
+  .nav-link-hover::after {
+    content: "";
+    opacity: 0;
+    transition: all 1.5s;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .padding-r {
+    padding-left: 210px;
+    padding-top: 100px;
+  }
+  
+  .nav-link-hover:hover::after {
+    opacity: 1;
+  }
+  .nav-link-hover-css {
+    position: relative;
+  }
+  .nav-link-hover-css::after {
+    content: "";
+    opacity: 0;
+    transition: all 1.5s;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(23, 221, 23);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .nav-link-hover-css:hover::after {
+    opacity: 1;
+  } */
